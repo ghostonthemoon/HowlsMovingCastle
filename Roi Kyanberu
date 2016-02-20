@@ -4,12 +4,12 @@
 #include <stddef.h>
 #include <stdint.h>
  
-/* Check if the compiler thinks we are targeting the wrong operating system. */
+/* Make sure everything actually works. This is kinda important. Compiler has to be compiling the right OS. */
 #if defined(__linux__)
 #error "You are not using a cross-compiler, you will most certainly run into trouble"
 #endif
  
-/* This tutorial will only work for the 32-bit ix86 targets. */
+/* This is for 32-bit ix86  */
 #if !defined(__i386__)
 #error "This tutorial needs to be compiled with a ix86-elf compiler"
 #endif
@@ -110,3 +110,4 @@ void kernel_main() {
          */
 	terminal_writestring("Hello, kernel World!\n");
 }
+/* So far that's our show folks */
